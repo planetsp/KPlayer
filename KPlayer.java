@@ -64,11 +64,11 @@ final public class KPlayer extends Application
                         try
                         {
                             myFileList.add(openMusicTracks.showOpenDialog(window));
-                            for (File b: myFileList) //enhanced for loop used to stop playlist from constantly repeating index 0
+                            for (File currentFile: myFileList) //enhanced for loop used to stop playlist from constantly repeating index 0
                             {
-								if(b!=null){
-                                playList.add(myFileList.get(i).getName()); //gets name so that the playlist can be displayed to user later on
-                                mediaPlayer.add(Controls.getMediaPlayer(Controls.getMedia(myFileList.get(i)))); //adds the actual logical file to the mediaPlayer list so that it can be played
+								if(currentFile != null){
+                                playList.add(currentFile.getName()); //gets name so that the playlist can be displayed to user later on
+                                mediaPlayer.add(Controls.getMediaPlayer(Controls.getMedia(currentFile))); //adds the actual logical file to the mediaPlayer list so that it can be played
                                 System.out.println(playList.toString());
                                 
 								}
